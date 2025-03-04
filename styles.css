@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-out;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 10px;
+    animation: fadeIn 1.5s ease-out 0.5s;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: fadeIn 2s ease-out 1s;
+}
+
+.product {
+    position: relative;
+    width: 48%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.nuevo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FF5733;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Offer Section */
+.offer {
+    width: 48%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.offer-details {
+    margin-top: 10px;
+}
+
+.discount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF5733;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.offer:hover .discount {
+    color: #C70039;
+}
+
+.offer p {
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.offer:hover p {
+    color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { left: -50px; opacity: 0; }
+    100% { left: 10px; opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product, .offer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+.regular-size {
+    width: 100%; /* Ajusta el tamaño al 100% del contenedor */
+    max-width: 350px; /* Establece un tamaño máximo para la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
